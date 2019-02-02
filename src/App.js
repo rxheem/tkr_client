@@ -14,15 +14,12 @@ class App extends Component {
     return (
       <Router>
         <Container>
-
           {/* Displaying the header here */}
           <Header />
-
           <Switch>
             <Route exact path="/signin" component={SignIn} />
-
-          </Switch>   {/* End Switch */}
-
+          </Switch>{" "}
+          {/* End Switch */}
           {/* Putting a constant Footer here */}
           <Footer />
         </Container>
