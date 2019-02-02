@@ -8,6 +8,7 @@ import Header from "./views/header/Header";
 
 // Importing all the components here
 import SignIn from "./components/signin/SignIn";
+import Dashbaord from "./components/dashboard/Dashboard";
 
 class App extends Component {
   render() {
@@ -18,8 +19,10 @@ class App extends Component {
           <Header />
           <Switch>
             <Route exact path="/signin" component={SignIn} />
-          </Switch>{" "}
+            <Route exact path="/dashboard" component={Dashboard} />
+          </Switch>
           {/* End Switch */}
+
           {/* Putting a constant Footer here */}
           <Footer />
         </Container>
