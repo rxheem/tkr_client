@@ -18,7 +18,7 @@ const Header = () => {
             <i className="search link icon"></i>
           </div>
         </div>
-        <NavLink className="ui primary blue" to="/signin">Sign in</NavLink>
+        <NavLink className="ui item" to="/signin">Sign in</NavLink>
       </div>
     </div>
   );

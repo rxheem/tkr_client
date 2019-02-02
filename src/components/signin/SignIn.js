@@ -23,7 +23,7 @@ class SignIn extends Component {
 
                 <div className="field">
                   <label>Email or username</label>
-                  <div className="ui left icon input">
+                  <div className="ui left icon envelope">
                     <input type="text" name="email" placeholder="Enter email address" />
                   </div>
                 </div>
