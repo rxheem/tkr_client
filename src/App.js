@@ -1,26 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import { Container } from "semantic-ui-react";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
+// Importing all the Views here
+import Footer from "./views/footer/Footer";
+import Header from "./views/header/Header";
+
+// Importing all the components here
+import SignIn from "./components/signin/SignIn";
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+      <Router>
+        <Container>
+
+          {/* Displaying the header here */}
+          <Header />
+
+          <Switch>
+            <Route exact path="/signin" component={SignIn} />
+
+          </Switch>   {/* End Switch */}
+
+          {/* Putting a constant Footer here */}
+          <Footer />
+        </Container>
+      </Router>
     );
   }
 }

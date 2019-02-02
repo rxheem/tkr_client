@@ -1,0 +1,32 @@
+.footer {
+  padding-top: 30px;
+}
+
+.footer-label {
+
+  /* There was too much space between the label and the nav items
+  so I took out some .. This seems to work fine, but may cause issues
+  https://www.smashingmagazine.com/2009/07/the-definitive-guide-to-using-negative-margins/
+   */
+  margin-bottom: -15px !important;
+}
+
+.footer-nav {
+  text-align: center;
+}
+
+.nav-item {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px;
+}
+
+.footer-nav-item{
+  text-decoration: none;
+  color: #DCDCDC;
+}
+
+.footer-nav-item:hover {
+  color: black;
+  transition: 1s;
+}

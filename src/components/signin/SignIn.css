@@ -1,0 +1,40 @@
+.sign-in {
+
+  /* Not sure why Semantic UI keeps pushing everything otogether  */
+  padding: 20px;
+}
+
+.heading {
+  text-align: center;
+}
+
+.fix {
+  clear: both;
+}
+
+.mainform {
+  margin: auto !important;
+  width: 50%;
+  height: 50%;
+
+  /* Bringing it down a little */
+  padding-top: 30px;
+}
+
+.form {
+  width: 400px;
+
+  /* Center for Semantic purposes */
+  margin: auto !important;
+}
+
+#login-btn {
+  align: right !important;
+}
+
+/* This isn't working like it should, even when its saved as important :( */
+.forgot-password {
+  text-align: right !important;
+  align: right;
+  padding-top: 5px !important;
+}
