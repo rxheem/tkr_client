@@ -6,6 +6,12 @@ import { Animated } from "react-animated-css";
 // Import style
 import "./SignIn.css";
 
+function onSubmit (e) {
+  e.preventDefault();
+
+  alert('Submit button was clicked!');
+}
+
 class SignIn extends Component {
   render() {
     return (
@@ -21,7 +27,7 @@ class SignIn extends Component {
           </div>
 
           <div className="mainform">
-            <form className="ui form">
+            <form className="ui form" submit={onSubmit}>
               <div className="ui stacked secondary segment">
                 <div className="field">
                   <label>Email or username</label>
@@ -46,7 +52,7 @@ class SignIn extends Component {
                   </div>
                 </div>
 
-                <button className="ui fluid small primary submit button">
+                <button className="ui fluid small primary submit button" onClick={onSubmit}>
                   Sign in
                 </button>
 
