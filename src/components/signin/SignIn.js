@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Container } from "semantic-ui-react";
 import { Input, Button, Checkbox, Form } from "semantic-ui-react";
 import { Animated } from "react-animated-css";
+import swal from "sweetalert";
 
 // Import style
 import "./SignIn.css";
@@ -9,7 +10,7 @@ import "./SignIn.css";
 function onSubmit (e) {
   e.preventDefault();
 
-  alert('Submit button was clicked!');
+  swal ( "Awesome" ,  "You clicked the sign in button!" ,  "success" )
 }
 
 class SignIn extends Component {
