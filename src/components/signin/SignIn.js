@@ -1,3 +1,8 @@
+/*  The Sign In component displays the sign in functionlity to the users. Users are able to sign in 
+*   using their employee email and their unique password. Standard form authentication is used for 
+*   signing in. 
+*/
+
 import React, { Component } from "react";
 import { Container } from "semantic-ui-react";
 import { Input, Button, Checkbox, Form } from "semantic-ui-react";
