@@ -10,6 +10,7 @@ import swal from "sweetalert";
 // Import style
 import "./SignIn.css";
 
+// This function will be called when the user submits the form data
 function onSubmit(e) {
   e.preventDefault();
 
@@ -20,19 +21,20 @@ function onSubmit(e) {
   );
 }
 
-/*  This seems to not be working.
-onChange = (e) => this.setState({ [e.target.name]: e.target.value });
-*/
-
-handleChange(event) {
-  event.preventDefault();
-  this.setState({value: event.target.value});
+// Handles the emal change
+handleEmailChange = (evt) => {
+  this.setState({ email: evt.target.value });
 }
 
+// Handles the password change
+handlePasswordChange = (evt) => {
+    this.setState({ password: evt.target.value });
+}
+  
 class SignIn extends Component {
   constructor(props) {
     super(props);
-
+    
     this.state = {
       email: "",
       password: ""
@@ -41,6 +43,8 @@ class SignIn extends Component {
 
   render() {
     return (
+      
+      {/* I'm wrapping the contents in an animated div that drops in from the top. */}
       <Animated
         animationIn="bounceInDown"
         animationOut="fadeOut"
@@ -62,7 +66,7 @@ class SignIn extends Component {
                       type="text"
                       name="email"
                       placeholder="Enter email address"
-                      onChange={this.handleChange}
+                      onChange={this.handleEmailChange}
                       value={this.state.email}
                     />
                   </div>
@@ -75,7 +79,7 @@ class SignIn extends Component {
                       type="password"
                       name="password"
                       placeholder="Enter password"
-                      onChange={this.handleChange}
+                      onChange={this.handlePasswordChange}
                       value={this.state.password}
                     />
                   </div>
