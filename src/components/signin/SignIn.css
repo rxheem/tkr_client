@@ -34,8 +34,8 @@
 
 /* This isn't working like it should, even when its saved as important :( */
 .forgot-password {
-  text-align: right !important;
-  padding-top: 5px !important;
+  text-align: right;
+  padding-top: 5px;
 }
 
 .forgot-password:hover{
