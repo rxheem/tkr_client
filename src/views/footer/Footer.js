@@ -35,7 +35,7 @@ class Footer extends Component {
           <Animated animationIn="zoomInUp" animationOut="fadeOut" isVisible={true}>
 
             {/* For the time being, we can put a little label here */}
-            <Label className="footer-label">Client Tracker</Label>
+            <h5 className="footer-label">Client Tracker</h5>
           </Animated>
 
             <ul>

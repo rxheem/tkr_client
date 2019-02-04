@@ -7,13 +7,30 @@ import swal from "sweetalert";
 // Import style
 import "./SignIn.css";
 
-function onSubmit (e) {
+function onSubmit(e) {
   e.preventDefault();
 
-  swal ( "Awesome" ,  "You clicked the sign in button!" ,  "success" )
+  swal(
+    "Awesome",
+    "You clicked the sign in button! It doesn't do anything tho :)",
+    "success"
+  );
+}
+
+function onChange(e) {
+  this.setState({ [e.target.name]: e.target.value });
 }
 
 class SignIn extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      email: "",
+      password: ""
+    };
+  }
+
   render() {
     return (
       <Animated
@@ -37,6 +54,8 @@ class SignIn extends Component {
                       type="text"
                       name="email"
                       placeholder="Enter email address"
+                      onChange={this.onChange}
+                      value={this.state.email}
                     />
                   </div>
                 </div>
@@ -49,19 +68,24 @@ class SignIn extends Component {
                       type="password"
                       name="password"
                       placeholder="Enter password"
+                      onChange={this.onChange}
+                      value={this.state.password}
                     />
                   </div>
                 </div>
 
-                <button className="ui fluid small primary submit button" onClick={onSubmit}>
+                <button
+                  className="ui fluid small primary submit button"
+                  onClick={onSubmit}
+                >
                   Sign in
                 </button>
-
-                {/* Doesn't do anything, but just adding it here */}
-                <a href="#" className="forgot-password fix">
-                  Trouble signing in?
-                </a>
               </div>
+
+              {/* Doesn't do anything, but just adding it here */}
+              <a href="#" className="forgot-password">
+                Trouble signing in?
+              </a>
             </form>
           </div>
         </div>

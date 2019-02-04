@@ -35,6 +35,9 @@
 /* This isn't working like it should, even when its saved as important :( */
 .forgot-password {
   text-align: right !important;
-  align: right;
   padding-top: 5px !important;
+}
+
+.forgot-password:hover{
+  color: black;
 }
