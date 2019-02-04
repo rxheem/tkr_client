@@ -1,11 +1,9 @@
-/*  The Sign In component displays the sign in functionlity to the users. Users are able to sign in 
-*   using their employee email and their unique password. Standard form authentication is used for 
-*   signing in. 
+/*  The Sign In component displays the sign in functionlity to the users. Users are able to sign in
+*   using their employee email and their unique password. Standard form authentication is used for
+*   signing in.
 */
 
 import React, { Component } from "react";
-import { Container } from "semantic-ui-react";
-import { Input, Button, Checkbox, Form } from "semantic-ui-react";
 import { Animated } from "react-animated-css";
 import swal from "sweetalert";
 
@@ -23,7 +21,7 @@ function onSubmit(e) {
 }
 
 function onChange(e) {
-  this.setState({ [e.target.name]: e.target.value });
+//  this.setState({ [e.target.name]: e.target.value });
 }
 
 class SignIn extends Component {
@@ -59,7 +57,7 @@ class SignIn extends Component {
                       type="text"
                       name="email"
                       placeholder="Enter email address"
-                      onChange={this.onChange}
+                      onChange={onChange}
                       value={this.state.email}
                     />
                   </div>
@@ -68,7 +66,6 @@ class SignIn extends Component {
                 <div className="field">
                   <label>Password</label>
                   <div className="ui left icon input">
-                    <i className="lock icon" />
                     <input
                       type="password"
                       name="password"

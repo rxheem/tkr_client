@@ -9,7 +9,7 @@
 
 import React, { Component } from "react";
 import { Animated } from "react-animated-css";
-import { Container, Label } from "semantic-ui-react";
+import { Container } from "semantic-ui-react";
 import "./Footer.css";
 
 // Importing SweetAlert here

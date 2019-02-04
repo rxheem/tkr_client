@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Container } from "semantic-ui-react";
-import { NavLink, BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 // Importing all the Views here
 import Footer from "./views/footer/Footer";
