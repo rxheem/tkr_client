@@ -20,8 +20,13 @@ function onSubmit(e) {
   );
 }
 
-function onChange(e) {
-//  this.setState({ [e.target.name]: e.target.value });
+/*  This seems to not be working.
+onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+*/
+
+handleChange(event) {
+  event.preventDefault();
+  this.setState({value: event.target.value});
 }
 
 class SignIn extends Component {
@@ -57,7 +62,7 @@ class SignIn extends Component {
                       type="text"
                       name="email"
                       placeholder="Enter email address"
-                      onChange={onChange}
+                      onChange={this.handleChange}
                       value={this.state.email}
                     />
                   </div>
@@ -70,7 +75,7 @@ class SignIn extends Component {
                       type="password"
                       name="password"
                       placeholder="Enter password"
-                      onChange={this.onChange}
+                      onChange={this.handleChange}
                       value={this.state.password}
                     />
                   </div>
