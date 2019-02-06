@@ -39,5 +39,7 @@
 }
 
 .forgot-password:hover{
+  transition: 2s;
+  transition-property: all;
   color: black;
 }

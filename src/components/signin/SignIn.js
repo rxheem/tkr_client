@@ -1,10 +1,11 @@
 /*  The Sign In component displays the sign in functionlity to the users. Users are able to sign in
-*   using their employee email and their unique password. Standard form authentication is used for
-*   signing in.
-*/
+ *   using their employee email and their unique password. Standard form authentication is used for
+ *   signing in.
+ */
 
 import React, { Component } from "react";
 import { Animated } from "react-animated-css";
+import { NavLink } from "react-router-dom";
 import swal from "sweetalert";
 
 // Import style
@@ -23,11 +24,6 @@ function onSubmit(e) {
 /*  This seems to not be working.
 onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 */
-
-handleChange(event) {
-  event.preventDefault();
-  this.setState({value: event.target.value});
-}
 
 class SignIn extends Component {
   constructor(props) {
@@ -62,8 +58,6 @@ class SignIn extends Component {
                       type="text"
                       name="email"
                       placeholder="Enter email address"
-                      onChange={this.handleChange}
-                      value={this.state.email}
                     />
                   </div>
                 </div>
@@ -75,8 +69,6 @@ class SignIn extends Component {
                       type="password"
                       name="password"
                       placeholder="Enter password"
-                      onChange={this.handleChange}
-                      value={this.state.password}
                     />
                   </div>
                 </div>
@@ -90,9 +82,9 @@ class SignIn extends Component {
               </div>
 
               {/* Doesn't do anything, but just adding it here */}
-              <a href="#" className="forgot-password">
-                Trouble signing in?
-              </a>
+              <NavLink className="ui forgot-password" to="/signin">
+                Forgot your password?
+              </NavLink>
             </form>
           </div>
         </div>

@@ -9,6 +9,7 @@ import Header from "./views/header/Header";
 // Importing all the components here
 import Dashboard from "./components/dashboard/Dashboard";
 import SignIn from "./components/signin/SignIn";
+import Home from "./components/home/Home";
 
 class App extends Component {
   render() {
@@ -20,7 +21,7 @@ class App extends Component {
           <Header />
           <Switch>
 
-            <Route exact path="/" component={Dashboard} />
+            <Route exact path="/" component={Home} />
             <Route exact path="/signin" component={SignIn} />
           </Switch>
           {/* End Switch */}
